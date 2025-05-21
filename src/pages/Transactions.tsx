@@ -24,7 +24,7 @@ import {
 import { Avatar, Modal, DatePicker, Select } from "antd";
 import dayjs from "dayjs";
 import isBetween from "dayjs/plugin/isBetween";
-import Header from "../components/Header";
+import Header from "../components/ui/Header";
 
 dayjs.extend(isBetween);
 

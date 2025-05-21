@@ -49,7 +49,7 @@ const incomeExpenseData = [
   },
 ];
 
-export default function DashboardCharts() {
+export default function ExpenseIncomeCharts() {
   return (
     <div className="flex flex-col lg:flex-row gap-6 w-full">
       {/* Balance Area Chart */}

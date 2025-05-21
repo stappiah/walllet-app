@@ -4,7 +4,7 @@ import { Input } from "../components/ui/Input";
 import { Card } from "../components/ui/Card";
 import { BsCheckCircleFill, BsXCircleFill } from "react-icons/bs";
 import { FaUserCircle } from "react-icons/fa";
-import Header from "../components/Header";
+import Header from "../components/ui/Header";
 
 const steps = ["Recipient", "Amount", "Confirmation", "Result"];
 
@@ -18,7 +18,6 @@ export default function FundTransfer() {
 
   const handleSubmit = () => {
     setError(null);
-    // Simulate transfer success/failure randomly
     setTimeout(() => {
       const result = Math.random() > 0.3;
       setIsSuccess(result);
@@ -26,7 +25,6 @@ export default function FundTransfer() {
     }, 1200);
   };
 
-  // Simulate recipient avatar (could be replaced with real lookup)
   const recipientAvatar = recipient ? (
     <div className="flex items-center gap-2">
       <FaUserCircle className="text-blue-400 text-3xl" />

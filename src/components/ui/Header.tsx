@@ -3,8 +3,8 @@ import { FiSearch } from "react-icons/fi";
 import { FaBell } from "react-icons/fa6";
 import { IoIosArrowDown } from "react-icons/io";
 import { NavLink } from "react-router-dom";
-import userImage from "../assets/tue2255.jpg";
 import { useState } from "react";
+import avatarImg from "../../assets/tue2255.jpg";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -12,7 +12,6 @@ export default function Header() {
     { name: "Dashboard", path: "/" },
     { name: "Transactions", path: "/transactions" },
     { name: "Transfer", path: "/transfer" },
-    { name: "Referral", path: "/referral" },
   ];
 
   return (
@@ -77,7 +76,7 @@ export default function Header() {
             <FaBell size={18} />
           </button>
           <div className="flex items-center gap-2 cursor-pointer hover:opacity-90 transition">
-            <Avatar size="small" src={userImage} />
+            <Avatar size="small" src={avatarImg} />
             <span className="text-sm font-medium hidden sm:inline">
               Stephen Appiah
             </span>

@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
 import Categories from '../components/dashboard/Categories';
-import DashboardCharts from '../components/dashboard/DashboardCharts';
 import { MdArrowOutward, MdOutlineRemoveRedEye } from 'react-icons/md';
 import { GoArrowDownLeft } from 'react-icons/go';
 import { FaRegEyeSlash } from 'react-icons/fa6';
-import Header from '../components/Header';
-import { Card } from '../components/ui/Card';
 import FirstChart from '../components/dashboard/FirstChart';
+import Header from '../components/ui/Header';
+import { useNavigate } from 'react-router-dom';
+import ExpenseIncomeCharts from '../components/dashboard/ExpenseIncomeCharts';
 
 export default function Dashboard() {
   const [view_balance, setview_balance] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <div className="bg-gray-50 min-h-screen">
@@ -40,11 +41,11 @@ export default function Dashboard() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-3 mt-4 md:mt-0">
-              <button className="bg-white hover:bg-blue-100 transition px-6 py-2 rounded-full flex items-center gap-2 shadow-sm font-medium">
+              <button onClick={() => alert("Request flow coming soon")} className="bg-white hover:bg-blue-100 transition px-6 py-2 rounded-full flex items-center gap-2 shadow-sm font-medium cursor-pointer">
                 <GoArrowDownLeft className="text-blue-600" />
                 <span className="text-blue-700">Request Money</span>
               </button>
-              <button className="bg-white hover:bg-blue-100 transition px-6 py-2 rounded-full flex items-center gap-2 shadow-sm font-medium">
+              <button onClick={() => navigate("/transfer")} className="bg-white hover:bg-blue-100 transition px-6 py-2 rounded-full flex items-center gap-2 shadow-sm font-medium cursor-pointer">
                 <MdArrowOutward className="text-blue-600" />
                 <span className="text-blue-700">Send Money</span>
               </button>
@@ -64,7 +65,7 @@ export default function Dashboard() {
         </div>
 
         <div className="mt-10">
-          <DashboardCharts />
+          <ExpenseIncomeCharts />
         </div>
       </div>
     </div>
