@@ -33,3 +33,7 @@ Visit http://localhost:5173 to view the application.
 - Tailwind CSS
 - React Icons
 - Vite
+
+##  Notes
+This is a front-end-only mock interface. No real backend or API is connected.
+The success or failure of the fund transfer is simulated randomly.
